@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration> 
+  <appender name="consoleappender"
+  			class="ch.qos.logback.core.ConsoleAppender">
+  </appender>
+	<appender name="aiappender" 
+	    			class="com.microsoft.applicationinsights.logback.ApplicationInsightsAppender">
+	
+	</appender>
+
+    <root level="info">
+        <appender-ref ref="consoleappender" />
+        <appender-ref ref="aiappender" />
+    </root>
+</configuration>
