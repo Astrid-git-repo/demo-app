@@ -17,6 +17,8 @@ public class DemoController {
 	@GetMapping("/welcome/{name}")
 	  public String welcomeMessage(@PathVariable String name) {
 		logger.info("Welcome Message --query param="+name);
+		String var=System.getenv("APPINSIGHTS_APP_SERVICE_ENV");
+		logger.info("APP service env variable--APPINSIGHTS_APP_SERVICE_ENV"+var);
 	    return "Hello There! Welcome "+name;
 	  }
 	
